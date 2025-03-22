@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DaisyUi Test</title>
+    <!-- daisyui and tailwind css link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="navbar bg-base-100 shadow-sm">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+      </div>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        <li><a>Item 1</a></li>
+        <li>
+          <a>Parent</a>
+          <ul class="p-2">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </li>
+        <li><a>Item 3</a></li>
+      </ul>
+    </div>
+    <a class="btn btn-ghost text-xl">daisyUI</a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a>Item 1</a></li>
+      <li>
+        <details>
+          <summary>Parent</summary>
+          <ul class="p-2">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a>Item 3</a></li>
+    </ul>
+  </div>
+  <div class="navbar-end">
+    <a class="btn">Button</a>
+  </div>
+</div>
+        <h1>I am using DaisyUi</h1>
+       
+     <button class="btn btn-primary text-xl font-bold">Click Me</button>
+     <button class="btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
+        Like
+      </button>
+      <button class="btn">
+        <span class="loading loading-spinner"></span>
+        loading
+      </button>
+      <button class="btn btn-primary">Hi</button><br>
+     <button class="btn btn-success">Hi</button>
+     <button class="btn h-20 w-90 bg-white text-black text-2xl border-[#e5e5e5]">
+        <svg aria-label="Google logo" width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g><path d="m0 0H512V512H0" fill="#fff"></path><path fill="#34a853" d="M153 292c30 82 118 95 171 60h62v48A192 192 0 0190 341"></path><path fill="#4285f4" d="m386 400a140 175 0 0053-179H260v74h102q-7 37-38 57"></path><path fill="#fbbc02" d="m90 341a208 200 0 010-171l63 49q-12 37 0 73"></path><path fill="#ea4335" d="m153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55"></path></g></svg>
+        Login with Google
+      </button>
+      <details class="dropdown">
+        <summary class="btn m-1">open or close</summary>
+        <ul class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+          <li><a>Item 1</a></li>
+          <li><a>Item 2</a></li>
+        </ul>
+      </details>
+      <br>
+      <!-- Open the modal using ID.showModal() method -->
+<button class="btn" onclick="my_modal_1.showModal()">Order</button>
+<dialog id="my_modal_1" class="modal text-white">
+  <div class="modal-box bg-red-600 ">
+    <h3 class="text-lg font-bold">Hi!</h3>
+    <p class="py-4 text-orange-600 text-white">Thank You For Your Order</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn bg-orange-700 text-white">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+<!-- The button to open modal -->
+<a href="#my_modal_8" class="btn">open modal</a>
+
+<!-- Put this part before </body> tag -->
+<div class="modal" role="dialog" id="my_modal_8">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">This modal works with anchor links</p>
+    <div class="modal-action">
+      <a href="" class="btn">Yay!</a>
+
+    </div>
+  </div>
+</div>
+<br>
+<label class="swap">
+    <input type="checkbox" />
+    <div class="swap-on">ON</div>
+    <div class="swap-off text-red-500">OFF</div>
+  </label>
+  <label class="swap swap-flip text-9xl">
+    <!-- this hidden checkbox controls the state -->
+    <input type="checkbox" />
+  
+    <div class="swap-on">😈</div>
+    <div class="swap-off">😇</div>
+  </label>
+  
+  <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+    <input type="radio" name="my-accordion-2" checked="checked" />
+    <div class="collapse-title font-semibold">Is thi good product?</div>
+    <div class="collapse-content text-sm">Yes.</div>
+  </div>
+  <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+    <input type="radio" name="my-accordion-2" />
+    <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+    <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+  </div>
+  <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+    <input type="radio" name="my-accordion-2" />
+    <div class="collapse-title font-semibold">How do I update my profile information?</div>
+    <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+  </div><br>
+  <div class="avatar avatar-online">
+    <div class="w-24 rounded-full">
+      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+    </div>
+  </div>
+  <div class="avatar avatar-offline">
+    <div class="w-24 rounded-full">
+      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+    </div>
+  </div>
+  <div class="card bg-base-100 w-96 shadow-sm">
+    <figure>
+      <img
+        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+        alt="Shoes" />
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">
+        Card Title
+        <div class="badge badge-secondary">NEW</div>
+      </h2>
+      <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+      <div class="card-actions justify-end">
+        <div class="badge badge-outline">Fashion</div>
+        <div class="badge badge-outline">Products</div>
+      </div>
+    </div>
+  </div>
+  <figure class="diff aspect-16/9" tabindex="0">
+    <div class="diff-item-1" role="img">
+      <div class="bg-primary text-primary-content grid place-content-center text-9xl font-black">
+        DAISY
+      </div>
+    </div>
+    <div class="diff-item-2" role="img" tabindex="0">
+      <div class="bg-base-200 grid place-content-center text-9xl font-black">DAISY</div>
+    </div>
+    <div class="diff-resizer"></div>
+  </figure>
+
+  <div class="my-1 flex w-full justify-center gap-1">
+    <kbd class="kbd">q</kbd>
+    <kbd class="kbd">w</kbd>
+    <kbd class="kbd">e</kbd>
+    <kbd class="kbd">r</kbd>
+    <kbd class="kbd">t</kbd>
+    <kbd class="kbd">y</kbd>
+    <kbd class="kbd">u</kbd>
+    <kbd class="kbd">i</kbd>
+    <kbd class="kbd">o</kbd>
+    <kbd class="kbd">p</kbd>
+  </div>
+  <div class="my-1 flex w-full justify-center gap-1">
+    <kbd class="kbd">a</kbd>
+    <kbd class="kbd">s</kbd>
+    <kbd class="kbd">d</kbd>
+    <kbd class="kbd">f</kbd>
+    <kbd class="kbd">g</kbd>
+    <kbd class="kbd">h</kbd>
+    <kbd class="kbd">j</kbd>
+    <kbd class="kbd">k</kbd>
+    <kbd class="kbd">l</kbd>
+  </div>
+  <div class="my-1 flex w-full justify-center gap-1">
+    <kbd class="kbd">z</kbd>
+    <kbd class="kbd">x</kbd>
+    <kbd class="kbd">c</kbd>
+    <kbd class="kbd">v</kbd>
+    <kbd class="kbd">b</kbd>
+    <kbd class="kbd">n</kbd>
+    <kbd class="kbd">m</kbd>
+    <kbd class="kbd">/</kbd>
+  </div>
+
+    </body>
+  
+
+</html>
