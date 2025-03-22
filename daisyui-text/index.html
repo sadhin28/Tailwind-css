@@ -8,6 +8,8 @@
     <!-- daisyui and tailwind css link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+<script type="module" src="https://unpkg.com/cally"></script>
 </head>
 <body>
     <div class="navbar bg-base-100 shadow-sm">
@@ -207,6 +209,15 @@
     <kbd class="kbd">/</kbd>
   </div>
 
+  <div class="radial-progress" style="--value:30;" aria-valuenow="30" role="progressbar">30%</div>
+
+  <br>
+  
+<calendar-date class="cally bg-base-100 border border-base-300 shadow-lg rounded-box">
+    <svg aria-label="Previous" class="fill-current size-4" slot="previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M15.75 19.5 8.25 12l7.5-7.5"></path></svg>
+    <svg aria-label="Next" class="fill-current size-4" slot="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path></svg>
+    <calendar-month></calendar-month>
+  </calendar-date>
     </body>
   
 
